@@ -120,13 +120,13 @@ to the parent directory and checks against a `SHA256SUMS` downloaded there, outs
 Replace `v<version>` with the tag of the release you are checking:
 
 ```bash
-git clone https://github.com/ataziran/atazs-armatur
+git clone https://github.com/ioxoi/atazs-armatur
 cd atazs-armatur
 git checkout v<version>
 CGO_ENABLED=0 GOOS=linux GOARCH=amd64 \
   go build -trimpath -ldflags='-s -w' -o ../atazs-armatur-linux-amd64 .
 cd ..
-curl -fLO https://github.com/ataziran/atazs-armatur/releases/download/v<version>/SHA256SUMS
+curl -fLO https://github.com/ioxoi/atazs-armatur/releases/download/v<version>/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 ```
 

@@ -6,6 +6,16 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-10-01
+
+The project now lives at [ioxoi/atazs-armatur](https://github.com/ioxoi/atazs-armatur).
+
+### Changed
+
+- Module path and release downloads move to `github.com/ioxoi/atazs-armatur`. Install with
+  `go install github.com/ioxoi/atazs-armatur@latest` or from this repository's releases; verify
+  attestations with `--repo ioxoi/atazs-armatur`.
+
 ### Added
 
 - The model's display name (`model.display_name`, e.g. `Opus 5.5`) centred on line 1. It only
@@ -89,7 +99,8 @@ First release.
   usage, and an unknown option exits 2.
 - Release binaries for six targets with `SHA256SUMS` and a build provenance attestation.
 
-[Unreleased]: https://github.com/ataziran/atazs-armatur/compare/v0.3.0...HEAD
-[0.3.0]: https://github.com/ataziran/atazs-armatur/compare/v0.2.0...v0.3.0
-[0.2.0]: https://github.com/ataziran/atazs-armatur/compare/v0.1.0...v0.2.0
-[0.1.0]: https://github.com/ataziran/atazs-armatur/releases/tag/v0.1.0
+[Unreleased]: https://github.com/ioxoi/atazs-armatur/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/ioxoi/atazs-armatur/compare/v0.3.0...v0.4.0
+[0.3.0]: https://github.com/ioxoi/atazs-armatur/compare/v0.2.0...v0.3.0
+[0.2.0]: https://github.com/ioxoi/atazs-armatur/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/ioxoi/atazs-armatur/releases/tag/v0.1.0

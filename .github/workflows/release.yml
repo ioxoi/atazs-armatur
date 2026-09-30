@@ -86,7 +86,7 @@ jobs:
           set -eu
           for bin in dist/atazs-armatur-*; do
             info="$(go version -m "$bin")"
-            version="$(printf '%s\n' "$info" | awk '$1 == "mod" && $2 == "github.com/ataziran/atazs-armatur" { print $3 }')"
+            version="$(printf '%s\n' "$info" | awk '$1 == "mod" && $2 == "github.com/ioxoi/atazs-armatur" { print $3 }')"
             if [ "$version" != "$GITHUB_REF_NAME" ]; then
               echo "::error::$bin has module version '$version', want '$GITHUB_REF_NAME'"
               exit 1

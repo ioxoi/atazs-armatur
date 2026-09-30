@@ -27,8 +27,8 @@ Linux amd64 shown; on a Mac set `f=atazs-armatur-darwin-arm64` (Intel: `darwin-a
 
 ```bash
 f=atazs-armatur-linux-amd64
-curl -fLO https://github.com/ataziran/atazs-armatur/releases/latest/download/$f
-curl -fLO https://github.com/ataziran/atazs-armatur/releases/latest/download/SHA256SUMS
+curl -fLO https://github.com/ioxoi/atazs-armatur/releases/latest/download/$f
+curl -fLO https://github.com/ioxoi/atazs-armatur/releases/latest/download/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 mkdir -p ~/.local/bin && install -m 755 $f ~/.local/bin/atazs-armatur
 ```
@@ -37,7 +37,7 @@ On Windows, in PowerShell (on ARM, `atazs-armatur-windows-arm64.exe`):
 
 ```powershell
 $f = "atazs-armatur-windows-amd64.exe"
-$u = "https://github.com/ataziran/atazs-armatur/releases/latest/download"
+$u = "https://github.com/ioxoi/atazs-armatur/releases/latest/download"
 Invoke-WebRequest "$u/$f" -OutFile $f
 Invoke-WebRequest "$u/SHA256SUMS" -OutFile SHA256SUMS
 $h = (Get-FileHash $f -Algorithm SHA256).Hash.ToLower()
@@ -120,7 +120,7 @@ The [Quick start](#quick-start) is the whole installation. Release assets:
 - **macOS.** A browser download carries the quarantine flag and Gatekeeper may refuse to run it;
   `xattr -d com.apple.quarantine ~/.local/bin/atazs-armatur` clears it. `curl` downloads do not
   carry it.
-- **With Go 1.27 or later.** `go install github.com/ataziran/atazs-armatur@latest` puts it in
+- **With Go 1.27 or later.** `go install github.com/ioxoi/atazs-armatur@latest` puts it in
   `$(go env GOPATH)/bin`. Only the release binaries are reproducible and attested.
 - **Settings.** `padding: 0` because the lines are already sized to the terminal. `refreshInterval`
   re-runs the command every 60 seconds, so countdowns keep moving while the session is idle.
@@ -225,7 +225,7 @@ commit with the command above, `SHA256SUMS` and a build provenance attestation. 
 download, check the checksum as in the [Quick start](#quick-start), then:
 
 ```bash
-gh attestation verify atazs-armatur-linux-amd64 --repo ataziran/atazs-armatur
+gh attestation verify atazs-armatur-linux-amd64 --repo ioxoi/atazs-armatur
 ```
 
 Builds are reproducible: a clean clone at the tag, built with the same command, Go release and
@@ -235,12 +235,12 @@ Changes per release are in [CHANGELOG.md](CHANGELOG.md).
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Bugs and questions:
-[GitHub Issues](https://github.com/ataziran/atazs-armatur/issues).
+[GitHub Issues](https://github.com/ioxoi/atazs-armatur/issues).
 
 ## License
 
 GPL-3.0, see [LICENSE](LICENSE).
 
-[ci]: https://github.com/ataziran/atazs-armatur/actions/workflows/ci.yml
-[ci-badge]: https://github.com/ataziran/atazs-armatur/actions/workflows/ci.yml/badge.svg
+[ci]: https://github.com/ioxoi/atazs-armatur/actions/workflows/ci.yml
+[ci-badge]: https://github.com/ioxoi/atazs-armatur/actions/workflows/ci.yml/badge.svg
 [license-badge]: https://img.shields.io/badge/license-GPL--3.0-blue
